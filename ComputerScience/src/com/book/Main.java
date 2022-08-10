@@ -6,6 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("The answer is: " + FirstChapter.randomGaussian());
+		System.out.println("Try to use github");
 
 	}
 }
