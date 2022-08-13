@@ -86,6 +86,19 @@ public class FirstChapter {
 	}
 	
 	/**
+	 * Упражнение 1.2.25
+	 * Охлаждение под действием ветра.
+	 */
+	public static  double windCooling(double temperature, double velocity) {
+		if ((temperature < 50) && ((velocity < 120) && (velocity > 3)))
+			return (35.74 + 0.6215 * temperature + (0.4275 * temperature - 35.75) * Math.pow(velocity, 0.16));
+		else {
+			System.out.println("Incorrect input values...");
+			return 0.00;
+		}
+	}
+	
+	/**
 	 * Упражнение 1.2.27
 	 * Вывод случайного числа r из гауссовского распределения с использованием
 	 * формулы Бокса-Мюллера
