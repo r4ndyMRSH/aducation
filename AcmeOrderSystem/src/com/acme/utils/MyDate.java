@@ -4,7 +4,6 @@ public class MyDate {
 	private byte day;
 	private byte month;
 	private short year;
-	
 
 	{
 		day = 1;
@@ -55,7 +54,7 @@ public class MyDate {
 
 	public void setDay(int day) {
 		if (valid(day, month, year)) {
-			this.day =(byte) day;
+			this.day = (byte) day;
 		}
 	}
 
@@ -65,7 +64,7 @@ public class MyDate {
 
 	public void setYear(int year) {
 		if (valid(day, month, year)) {
-			this.year =(short) year;
+			this.year = (short) year;
 		}
 	}
 
@@ -75,16 +74,26 @@ public class MyDate {
 
 	public void setMonth(int month) {
 		if (valid(day, month, year)) {
-			this.month =(byte) month;
+			this.month = (byte) month;
 		}
 	}
 
 	public void setDate(int month, int day, int year) {
 		if (valid(day, month, year)) {
-			this.day =(byte) day;
-			this.month =(byte) month;
-			this.year =(short) year;
+			this.day = (byte) day;
+			this.month = (byte) month;
+			this.year = (short) year;
 		}
+	}
+
+	public boolean equals(Object o) {
+		if (o instanceof MyDate) {
+			MyDate d = (MyDate) o;
+			if ((d.day == day) && (d.month == month) && (d.year == year)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
