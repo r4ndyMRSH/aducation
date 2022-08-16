@@ -6,7 +6,7 @@ public class Order {
 	MyDate orderDate;
 	private double orderAmount = 0.00;
 	private String customer;
-	private Good product;
+	private Product product;
 	private int quantity;
 	private static double taxRate;
 
@@ -19,7 +19,7 @@ public class Order {
 
 	}
 
-	public Order(MyDate orderDate, double orderAmount, String customer, Good product, int quantity) {
+	public Order(MyDate orderDate, double orderAmount, String customer, Product product, int quantity) {
 		this.orderDate = orderDate;
 		this.orderAmount = orderAmount;
 		this.customer = customer;
@@ -93,11 +93,11 @@ public class Order {
 		this.customer = customer;
 	}
 
-	public Good getProduct() {
+	public Product getProduct() {
 		return product;
 	}
 
-	public void setProduct(Good product) {
+	public void setProduct(Product product) {
 		this.product = product;
 	}
 
