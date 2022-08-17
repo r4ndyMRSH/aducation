@@ -2,6 +2,7 @@ package com.book;
 
 import com.book.algorithm.Examples;
 import com.book.exercise.*;
+import static com.book.exercise.FirstChapter.randomGaussian;
 
 public class Main {
 
