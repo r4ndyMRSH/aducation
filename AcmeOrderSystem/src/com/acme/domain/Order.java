@@ -3,12 +3,15 @@ package com.acme.domain;
 import com.acme.utils.MyDate;
 
 public class Order {
+	
+	//Variables
 	MyDate orderDate;
 	private double orderAmount = 0.00;
 	private String customer;
 	private Product product;
 	private int quantity;
 	private static double taxRate;
+	private static Rushable rushable;
 
 	static {
 		taxRate = 0.05;
@@ -74,7 +77,16 @@ public class Order {
 		return total;
 
 	}
-
+	
+	public boolean isPriorityOrder() {
+		boolean priorityOrder = false;
+		if (rushable != null){
+			priorityOrder = rushable.isRushable(orderDate, orderAmount);
+		}
+		return priorityOrder;
+	}
+	
+	//Getters and Setters
 	public double getOrderAmount() {
 		return orderAmount;
 	}
@@ -114,5 +126,13 @@ public class Order {
 	
 	public static double getTaxRate() {
 		return taxRate;
+	}
+
+	public static Rushable getRushable() {
+		return rushable;
+	}
+
+	public static void setRushable(Rushable rushable) {
+		Order.rushable = rushable;
 	}
 }
