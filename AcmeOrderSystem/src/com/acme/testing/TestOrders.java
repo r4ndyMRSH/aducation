@@ -1,6 +1,9 @@
 package com.acme.testing;
 
 import com.acme.domain.Good.UnitOfMeasureType;
+
+import java.time.LocalDate;
+
 import com.acme.domain.*;
 import com.acme.utils.MyDate;
 
@@ -49,6 +52,23 @@ public class TestOrders {
 
 		System.out.println("Anvil isPriorityOrder: " + anvil.isPriorityOrder());
 		System.out.println("Balloons isPriorityOrder: " + balloons.isPriorityOrder());
+
+		// Change this date to one that is within
+		// the last 15 days of today.
+		MyDate hammerDate = new MyDate(5, 17, 2016);
+		Solid hammerType = new Solid("Acme Hammer", 281, 0.3, UnitOfMeasureType.CUBIC_METER, false, 100, 0.25, 0.3);
+		Order hammer = new Order(hammerDate, 10.00, "Wile E Coyote", hammerType, 10);
+		Order.setRushable((orderDate, orderAmount) -> {
+			// Create a LocalDate object for now.
+			LocalDate now = LocalDate.now();
+			// Create a LocalDate object for the order date.
+			LocalDate orderDatePlus30 = LocalDate.of(orderDate.getYear(), orderDate.getMonth(), orderDate.getDay());
+			// Add one month to the order date.
+			orderDatePlus30 = orderDatePlus30.plusMonths(1);
+			// If the current date is after the order date + one month,
+			// it's rushable.
+			return now.isAfter(orderDatePlus30);
+		});
 
 	}
 
