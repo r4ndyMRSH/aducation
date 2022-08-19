@@ -16,6 +16,7 @@ public class Solid extends Good {
 	 * Volume for the container of the solid.
 	 * 
 	 **/
+	@Override
 	public double volume() {
 		return width * length * getHeight();
 	}

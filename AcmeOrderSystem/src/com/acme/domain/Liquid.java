@@ -15,6 +15,7 @@ public class Liquid extends Good {
 	/**
 	 * Volume for a cylinder of the liquid.
 	 */
+	@Override
 	public double volume() {
 		return Math.PI * radius * radius * getHeight();
 	}
