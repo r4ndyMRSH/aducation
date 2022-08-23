@@ -5,7 +5,7 @@ import com.acme.utils.MyDate;
 public class Order {
 	
 	//Variables
-	MyDate orderDate;
+	private MyDate orderDate;
 	private double orderAmount = 0.00;
 	private String customer;
 	private Product product;
@@ -17,23 +17,21 @@ public class Order {
 		taxRate = 0.05;
 	}
 
+	//constructors
 	public Order(MyDate orderDate, double orderAmount, String customer) {
 		this(orderDate, orderAmount, customer, null, 1);
 
 	}
 
 	public Order(MyDate orderDate, double orderAmount, String customer, Product product, int quantity) {
-		this.orderDate = orderDate;
+		setOrderDate(orderDate);
 		this.orderAmount = orderAmount;
 		this.customer = customer;
 		this.product = product;
 		this.quantity = quantity;
 	}
 
-	public static void setTaxRate(double newRate) {
-		taxRate = newRate;
-	}
-
+	//Class methods
 	public static void computeTaxOn(double anAmount) {
 		System.out.println("The tax for " + anAmount + " is: " + anAmount * taxRate);
 	}
@@ -43,10 +41,7 @@ public class Order {
 		return orderAmount * Order.taxRate;
 	}
 
-	public String toString() {
-		return quantity + " ea. " + product + " for " + customer;
-	}
-
+	
 	public char jobSize() {
 		if (quantity <= 25) {
 			return 'S';
@@ -85,6 +80,22 @@ public class Order {
 		}
 		return priorityOrder;
 	}
+	
+	public boolean isHoliday (MyDate  proposedDate) {
+		boolean result = false;
+		for (MyDate holiday : MyDate.getHolidays()) {
+			if (holiday.equals(proposedDate)) {
+				result = true;
+			}
+		}
+		return result;
+	}
+	
+	//Overrided methods
+		@Override
+		public String toString() {
+			return quantity + " ea. " + product + " for " + customer;
+		}
 	
 	//Getters and Setters
 	public double getOrderAmount() {
@@ -135,4 +146,21 @@ public class Order {
 	public static void setRushable(Rushable rushable) {
 		Order.rushable = rushable;
 	}
+	
+	public static void setTaxRate(double newRate) {
+		taxRate = newRate;
+	}
+
+	public MyDate getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(MyDate orderDate) {
+		if(isHoliday(orderDate)) {
+			System.out.println("Order date, " + orderDate + ", can't be set to a holiday");
+		} else {
+		this.orderDate = orderDate;
+		}
+	}
+
 }

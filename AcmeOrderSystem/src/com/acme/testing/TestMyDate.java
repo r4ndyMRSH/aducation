@@ -40,6 +40,8 @@ public class TestMyDate {
 			System.out.println("These two dates are equal");
 		else
 			System.out.println("These two dates are not equal");
+		
+		MyDate.listHolidays();
 //		MyDate.leapYears();
 	}
 }

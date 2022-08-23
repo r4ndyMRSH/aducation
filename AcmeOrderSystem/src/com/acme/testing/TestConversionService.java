@@ -15,19 +15,18 @@ public class TestConversionService {
 		System.out.println(ConversionService.ounces(50));
 		System.out.println(ConversionService.pints(6.6f));
 		System.out.println(ConversionService.pounds(7.7));
-		
+
 		// can you figure out why these do not compile
-		ConversionService.fluidOunces((float)1.1);
+		ConversionService.fluidOunces((float) 1.1);
 		ConversionService.grams(30);
-		ConversionService.milliliters((int)4.0);
-		short grams = (short)ConversionService.grams(30);
-		byte byteGrams = (byte)ConversionService.grams(30);
+		ConversionService.milliliters((int) 4.0);
+		short grams = (short) ConversionService.grams(30);
+		byte byteGrams = (byte) ConversionService.grams(30);
 		System.out.println(grams);
 		System.out.println(byteGrams);
 
-
 		// why do these still work even though the types are different
-		
+
 		System.out.println("------------------------------------");
 		double ounces = ConversionService.fluidOunces(1.1f);
 		System.out.println(ounces);
@@ -45,10 +44,9 @@ public class TestConversionService {
 		System.out.println(ConversionService.ounces(50.5f));
 		System.out.println(ConversionService.pints(6L));
 		System.out.println(ConversionService.pounds(7L));
-		
 
-		// compare these results.  Can you tell why they are different?
-		
+		// compare these results. Can you tell why they are different?
+
 		System.out.println("------------------------------------");
 		float bigGallons = ConversionService.gallons(123456789123456789L);
 		System.out.println(bigGallons);
@@ -60,7 +58,19 @@ public class TestConversionService {
 		System.out.println(bigGrams);
 		long bigGrams2 = 1234567890L * 1000L;
 		System.out.println(bigGrams2);
-		
+		System.out.println("------------------------------------");
+
+		double[][] results = ConversionService.allKgToPounds(14.0, 29.0, 6.5, 7.7);
+		for (double[] result : results) {
+			System.out.println(result[0] + "->" + result[1]);
+		}
+		System.out.println("------------------------------------");
+
+		results = ConversionService.allKgToPounds(2, 5, 8, 4);
+		for (double[] result : results) {
+			System.out.println(result[0] + "->" + result[1]);
+		}
+
 	}
 
 }

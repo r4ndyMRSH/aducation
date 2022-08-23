@@ -34,7 +34,7 @@ public class TestOrders {
 		Order.computeTaxOn(3000.00);
 		anvil.computeTax();
 		balloons.computeTax();
-		MyDate date3 = new MyDate(5, 20, 2008);
+		MyDate date3 = new MyDate(1, 1, 2022);
 		Order anotherAnvil = new Order(date3, 200, "Road Runner");
 		System.out.println(anotherAnvil);
 		System.out.println("The total bill for: " + anvil + " is " + anvil.computeTotal());
