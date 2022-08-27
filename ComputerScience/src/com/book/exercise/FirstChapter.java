@@ -1,8 +1,12 @@
 package com.book.exercise;
 
 public class FirstChapter {
-
-	public static double g = 9.80665;
+	
+	/**
+	 * Ускорение свободного падения на поверхности Земли g (обычно произносится как «же») 
+	 * варьируется от 9,780 м/с² на экваторе до 9,82 м/с² на полюсах. 
+	 */
+	private static double g = 9.80665;
 
 	/**
 	 * Упражнение 1.2.2

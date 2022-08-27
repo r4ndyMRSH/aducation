@@ -1,3 +1,3 @@
 apply plugin : 'java'
 apply plugin : 'application'
-mainClassName = "HelloWorld"
+mainClassName = "com.r4ndy.SandboxProject"
