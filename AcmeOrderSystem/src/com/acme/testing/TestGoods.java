@@ -1,5 +1,8 @@
 package com.acme.testing;
 
+import java.util.Collections;
+import java.util.List;
+
 import com.acme.domain.Good;
 import com.acme.domain.Liquid;
 import com.acme.domain.Solid;
@@ -41,6 +44,15 @@ public class TestGoods {
 
 		System.out.println("v-----v");
 		System.out.println("Flammable products: " + Good.flammablesList());
+		
+		//Sort HashSet
+		Collections.sort((List<Good>) Good.getCatalog());
+		System.out.println(Good.getCatalog());
+		int q;
+		q = Collections.binarySearch(Good.getCatalog(), glue);
+		if (q > 0)
+			System.out.println("Found " + Good.getCatalog().get(q) + " in the catalog at location: " + q);
+		
 
 	}
 }
