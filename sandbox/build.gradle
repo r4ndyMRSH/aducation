@@ -1,3 +1,10 @@
 apply plugin : 'java'
 apply plugin : 'application'
 mainClassName = "com.r4ndy.SandboxProject"
+test {
+    useJUnitPlatform()
+}
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
