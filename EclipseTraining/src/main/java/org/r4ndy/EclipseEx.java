@@ -1,3 +1,4 @@
+package org.r4ndy;
 public class EclipseEx {
 
 	public static void main(String[] args) {
