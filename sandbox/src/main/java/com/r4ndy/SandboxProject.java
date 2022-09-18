@@ -3,8 +3,8 @@ package com.r4ndy;
 
 public class SandboxProject {
 	public static void main (String[] args){
-		Point dot1 = new Point(5,20);
-		Point dot2 = new Point(7,11);
+		Point dot1 = new Point(0,0);
+		Point dot2 = new Point(2,2);
 		
 		System.out.println("distance: " + distance(dot1, dot2));
 		System.out.println("----------");
