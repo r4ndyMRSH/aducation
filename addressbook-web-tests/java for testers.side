@@ -1,0 +1,21 @@
+{
+  "id": "b260e9b4-4ad6-46ca-97d6-7214d24f0cb9",
+  "version": "2.0",
+  "name": "java for testers",
+  "url": "",
+  "tests": [{
+    "id": "aef75c5a-9b18-4a58-ab41-97f1dfa934a6",
+    "name": "Untitled",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "e85941f2-acd4-4a7a-b69b-daac5a14083e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["aef75c5a-9b18-4a58-ab41-97f1dfa934a6"]
+  }],
+  "urls": [],
+  "plugins": []
+}
