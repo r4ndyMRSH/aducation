@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_cW11EDnrEe2apOcrzGxEuA" name="tests">
+    <eAnnotations xmi:id="_fmExMDnrEe2apOcrzGxEuA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_fmExMTnrEe2apOcrzGxEuA" source="codegen">
+        <details xmi:id="_fmExMjnrEe2apOcrzGxEuA" key="codegenDirectory" value="/addressbook-web-tests/src/test/java"/>
+        <details xmi:id="_ftj5QDnrEe2apOcrzGxEuA" key="AssociatedSourceCode" value="/addressbook-web-tests/src/test/java/ru/stqa/pft/adressbook/TestBase.java;2231316499/1;/addressbook-web-tests/src/test/java/ru/stqa/pft/adressbook/GroupCreationTests.java;681207853/1;/addressbook-web-tests/src/test/java/ru/stqa/pft/adressbook/GroupDeletionTests.java;1399879376/1;/addressbook-web-tests/src/test/java/ru/stqa/pft/adressbook/GroupData.java;785726467/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_fmH0gDnrEe2apOcrzGxEuA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_fmH0gTnrEe2apOcrzGxEuA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_fmIbkDnrEe2apOcrzGxEuA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_fmIbkTnrEe2apOcrzGxEuA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_fmIbkjnrEe2apOcrzGxEuA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_fmIbkznrEe2apOcrzGxEuA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_fmIblDnrEe2apOcrzGxEuA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_fmJCoDnrEe2apOcrzGxEuA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_fmJpsDnrEe2apOcrzGxEuA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_flcfEDnrEe2apOcrzGxEuA" name="ru">
+      <packagedElement xmi:type="uml:Package" xmi:id="_fle7UDnrEe2apOcrzGxEuA" name="stqa">
+        <packagedElement xmi:type="uml:Package" xmi:id="_flfiYDnrEe2apOcrzGxEuA" name="pft">
+          <packagedElement xmi:type="uml:Package" xmi:id="_flsWsDnrEe2apOcrzGxEuA" name="adressbook">
+            <packagedElement xmi:type="uml:Class" xmi:id="_fl81YDnrEe2apOcrzGxEuA" name="TestBase">
+              <ownedAttribute xmi:id="_fnyocDnrEe2apOcrzGxEuA" name="driver" type="_fnftgDnrEe2apOcrzGxEuA" isReadOnly="true" association="_foJ00DnrEe2apOcrzGxEuA"/>
+              <ownedAttribute xmi:id="_fnzPgDnrEe2apOcrzGxEuA" name="vars" visibility="private" type="_fnr6wTnrEe2apOcrzGxEuA" association="_foLqATnrEe2apOcrzGxEuA">
+                <qualifier xmi:id="_fn1EsDnrEe2apOcrzGxEuA">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </qualifier>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_fn1EsTnrEe2apOcrzGxEuA" name="js" visibility="package" type="_fnd4UTnrEe2apOcrzGxEuA" association="_foNfMTnrEe2apOcrzGxEuA"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_fn-1sDnrEe2apOcrzGxEuA" name="setUp" specification="_fmMF8DnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;c:\\tools\\geckodriver\\geckodriver.exe&quot;);&#xD;
+		driver = new FirefoxDriver();&#xD;
+		js = (JavascriptExecutor) driver;&#xD;
+		vars = new HashMap&lt;String, Object>();&#xD;
+		login(&quot;admin&quot;, &quot;secret&quot;);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_foDuMDnrEe2apOcrzGxEuA" name="tearDown" specification="_fmRlgDnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>driver.quit();&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_foEVQDnrEe2apOcrzGxEuA" name="login" specification="_fmTasDnrEe2apOcrzGxEuA">
+                <ownedParameter xmi:id="_foEVQTnrEe2apOcrzGxEuA" name="login">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_foEVQjnrEe2apOcrzGxEuA" name="password">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>driver.get(&quot;http://localhost/addressbook/&quot;);&#xD;
+		driver.findElement(By.name(&quot;user&quot;)).click();&#xD;
+		driver.findElement(By.name(&quot;user&quot;)).sendKeys(login);&#xD;
+		driver.findElement(By.name(&quot;pass&quot;)).click();&#xD;
+		driver.findElement(By.name(&quot;pass&quot;)).sendKeys(password);&#xD;
+		driver.findElement(By.cssSelector(&quot;input:nth-child(7)&quot;)).click();&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_foE8UDnrEe2apOcrzGxEuA" name="returnToGroupPage" specification="_fmUBwDnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>driver.findElement(By.linkText(&quot;group page&quot;)).click();&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_foE8UTnrEe2apOcrzGxEuA" name="submitGroupCreation" specification="_fmUo0DnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>driver.findElement(By.name(&quot;submit&quot;)).click();&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_foFjYDnrEe2apOcrzGxEuA" name="fillGroupForm" specification="_fnwMMTnrEe2apOcrzGxEuA">
+                <ownedParameter xmi:id="_foFjYTnrEe2apOcrzGxEuA" name="groupData" type="_fnuXADnrEe2apOcrzGxEuA"/>
+                <language>java</language>
+                <body>driver.findElement(By.name(&quot;group_name&quot;)).click();&#xD;
+		driver.findElement(By.name(&quot;group_name&quot;)).sendKeys(groupData.getGroupName());&#xD;
+		driver.findElement(By.name(&quot;group_header&quot;)).click();&#xD;
+		driver.findElement(By.name(&quot;group_header&quot;)).sendKeys(groupData.getGroupHeader());&#xD;
+		driver.findElement(By.name(&quot;group_footer&quot;)).click();&#xD;
+		driver.findElement(By.name(&quot;group_footer&quot;)).sendKeys(groupData.getGroupFooter());&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_foFjYjnrEe2apOcrzGxEuA" name="initGroupCreation" specification="_fmVP4DnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>driver.findElement(By.name(&quot;new&quot;)).click();&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_foGKcDnrEe2apOcrzGxEuA" name="gotoGroupPage" specification="_fmV28DnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>driver.findElement(By.linkText(&quot;groups&quot;)).click();&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_foGKcTnrEe2apOcrzGxEuA" name="deleteSelectedGroups" specification="_fmWeADnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>driver.findElement(By.name(&quot;delete&quot;)).click();&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_foGKcjnrEe2apOcrzGxEuA" name="selectGroup" specification="_fmXFEDnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>driver.findElement(By.name(&quot;selected[]&quot;)).click();&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_fmMF8DnrEe2apOcrzGxEuA" name="setUp" method="_fn-1sDnrEe2apOcrzGxEuA"/>
+              <ownedOperation xmi:id="_fmRlgDnrEe2apOcrzGxEuA" name="tearDown" method="_foDuMDnrEe2apOcrzGxEuA"/>
+              <ownedOperation xmi:id="_fmTasDnrEe2apOcrzGxEuA" name="login" visibility="private" method="_foEVQDnrEe2apOcrzGxEuA">
+                <ownedParameter xmi:id="_fmTasTnrEe2apOcrzGxEuA" name="login">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_fmTasjnrEe2apOcrzGxEuA" name="password">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_fmUBwDnrEe2apOcrzGxEuA" name="returnToGroupPage" visibility="protected" method="_foE8UDnrEe2apOcrzGxEuA"/>
+              <ownedOperation xmi:id="_fmUo0DnrEe2apOcrzGxEuA" name="submitGroupCreation" visibility="protected" method="_foE8UTnrEe2apOcrzGxEuA"/>
+              <ownedOperation xmi:id="_fmVP4DnrEe2apOcrzGxEuA" name="initGroupCreation" visibility="protected" method="_foFjYjnrEe2apOcrzGxEuA"/>
+              <ownedOperation xmi:id="_fmV28DnrEe2apOcrzGxEuA" name="gotoGroupPage" visibility="protected" method="_foGKcDnrEe2apOcrzGxEuA"/>
+              <ownedOperation xmi:id="_fmWeADnrEe2apOcrzGxEuA" name="deleteSelectedGroups" visibility="protected" method="_foGKcTnrEe2apOcrzGxEuA"/>
+              <ownedOperation xmi:id="_fmXFEDnrEe2apOcrzGxEuA" name="selectGroup" visibility="protected" method="_foGKcjnrEe2apOcrzGxEuA"/>
+              <ownedOperation xmi:id="_fnwMMTnrEe2apOcrzGxEuA" name="fillGroupForm" visibility="protected" method="_foFjYDnrEe2apOcrzGxEuA">
+                <ownedParameter xmi:id="_fnwMMjnrEe2apOcrzGxEuA" name="groupData" type="_fnuXADnrEe2apOcrzGxEuA"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_fnuXADnrEe2apOcrzGxEuA" name="GroupData">
+              <ownedAttribute xmi:id="_i8IuEDnrEe2apOcrzGxEuA" name="groupName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_i8J8MDnrEe2apOcrzGxEuA" name="groupHeader">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_i8LKUDnrEe2apOcrzGxEuA" name="groupFooter">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_i8MYcDnrEe2apOcrzGxEuA" name="GroupData" specification="_i8FqwDnrEe2apOcrzGxEuA">
+                <ownedParameter xmi:id="_i8MYcTnrEe2apOcrzGxEuA" name="groupName">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_i8MYcjnrEe2apOcrzGxEuA" name="groupHeader">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_i8MYcznrEe2apOcrzGxEuA" name="groupFooter">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_i8MYdDnrEe2apOcrzGxEuA" type="_fnuXADnrEe2apOcrzGxEuA" direction="return"/>
+                <language>java</language>
+                <body>this.groupName = groupName;&#xD;
+		this.groupHeader = groupHeader;&#xD;
+		this.groupFooter = groupFooter;&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_i8FqwDnrEe2apOcrzGxEuA" name="GroupData" method="_i8MYcDnrEe2apOcrzGxEuA">
+                <eAnnotations xmi:id="_i8FqxDnrEe2apOcrzGxEuA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_i8FqxTnrEe2apOcrzGxEuA" key="create"/>
+                </eAnnotations>
+                <ownedParameter xmi:id="_i8FqwTnrEe2apOcrzGxEuA" name="groupName">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_i8FqwjnrEe2apOcrzGxEuA" name="groupHeader">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_i8FqwznrEe2apOcrzGxEuA" name="groupFooter">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_i8GR0DnrEe2apOcrzGxEuA" type="_fnuXADnrEe2apOcrzGxEuA" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_foJ00DnrEe2apOcrzGxEuA" name="" memberEnd="_foJ00TnrEe2apOcrzGxEuA _fnyocDnrEe2apOcrzGxEuA">
+              <ownedEnd xmi:id="_foJ00TnrEe2apOcrzGxEuA" name="" type="_fl81YDnrEe2apOcrzGxEuA" association="_foJ00DnrEe2apOcrzGxEuA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_foLqATnrEe2apOcrzGxEuA" name="" memberEnd="_foLqAjnrEe2apOcrzGxEuA _fnzPgDnrEe2apOcrzGxEuA">
+              <ownedEnd xmi:id="_foLqAjnrEe2apOcrzGxEuA" name="" type="_fl81YDnrEe2apOcrzGxEuA" association="_foLqATnrEe2apOcrzGxEuA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_foNfMTnrEe2apOcrzGxEuA" name="" memberEnd="_foNfMjnrEe2apOcrzGxEuA _fn1EsTnrEe2apOcrzGxEuA">
+              <ownedEnd xmi:id="_foNfMjnrEe2apOcrzGxEuA" name="" type="_fl81YDnrEe2apOcrzGxEuA" association="_foNfMTnrEe2apOcrzGxEuA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_gcRZYDnrEe2apOcrzGxEuA" name="GroupCreationTests">
+              <generalization xmi:id="_gc3PQDnrEe2apOcrzGxEuA" general="_fl81YDnrEe2apOcrzGxEuA"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gc32UDnrEe2apOcrzGxEuA" name="testGroupCreation" specification="_gcT1oDnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>gotoGroupPage();
+		initGroupCreation();
+		fillGroupForm(new GroupData(&quot;test1&quot;, &quot;test2&quot;, &quot;test3&quot;));
+		submitGroupCreation();
+		returnToGroupPage();
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_gcT1oDnrEe2apOcrzGxEuA" name="testGroupCreation" method="_gc32UDnrEe2apOcrzGxEuA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_icBqoDnrEe2apOcrzGxEuA" name="GroupDeletionTests">
+              <generalization xmi:id="_icSwYDnrEe2apOcrzGxEuA" general="_fl81YDnrEe2apOcrzGxEuA"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_icTXcDnrEe2apOcrzGxEuA" name="testGroupDeletion" specification="_icC4wDnrEe2apOcrzGxEuA">
+                <language>java</language>
+                <body>gotoGroupPage();
+ selectGroup();
+ deleteSelectedGroups();
+ returnToGroupPage();
+  </body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_icC4wDnrEe2apOcrzGxEuA" name="testGroupDeletion" method="_icTXcDnrEe2apOcrzGxEuA"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_flh-oDnrEe2apOcrzGxEuA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_flh-oTnrEe2apOcrzGxEuA" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_fnSSIDnrEe2apOcrzGxEuA" name="HashMap"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_fnV8gDnrEe2apOcrzGxEuA" name="Map"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_fnr6wDnrEe2apOcrzGxEuA" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_fnr6wTnrEe2apOcrzGxEuA" name="Object"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_flilsDnrEe2apOcrzGxEuA" name="org">
+      <packagedElement xmi:type="uml:Package" xmi:id="_flilsTnrEe2apOcrzGxEuA" name="junit">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_fnYYwDnrEe2apOcrzGxEuA" name="After"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_fnaN8TnrEe2apOcrzGxEuA" name="Before"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_gc1aEDnrEe2apOcrzGxEuA" name="Test"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_flilsjnrEe2apOcrzGxEuA" name="openqa">
+        <packagedElement xmi:type="uml:Package" xmi:id="_flilsznrEe2apOcrzGxEuA" name="selenium">
+          <packagedElement xmi:type="uml:Package" xmi:id="_fljMwDnrEe2apOcrzGxEuA" name="firefox">
+            <packagedElement xmi:type="uml:Class" xmi:id="_fnhisTnrEe2apOcrzGxEuA" name="FirefoxDriver"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_fncDITnrEe2apOcrzGxEuA" name="By"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_fnd4UTnrEe2apOcrzGxEuA" name="JavascriptExecutor"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_fnftgDnrEe2apOcrzGxEuA" name="WebDriver"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_fl81YTnrEe2apOcrzGxEuA">
+      <eAnnotations xmi:id="_fl_4sDnrEe2apOcrzGxEuA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_fmOiMDnrEe2apOcrzGxEuA" base_Element="_fmMF8DnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Annotations xmi:id="_fmQXYDnrEe2apOcrzGxEuA" base_Element="_fmMF8DnrEe2apOcrzGxEuA">
+    <annotations xmi:id="_fmQ-cDnrEe2apOcrzGxEuA" name="Before"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_fmSMkDnrEe2apOcrzGxEuA" base_Element="_fmRlgDnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Annotations xmi:id="_fmSzoDnrEe2apOcrzGxEuA" base_Element="_fmRlgDnrEe2apOcrzGxEuA">
+    <annotations xmi:id="_fmSzoTnrEe2apOcrzGxEuA" name="After"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_fnUuYDnrEe2apOcrzGxEuA" base_Element="_fnSSIDnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_fnXxsDnrEe2apOcrzGxEuA" base_Element="_fnV8gDnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_fnaN8DnrEe2apOcrzGxEuA" base_Element="_fnYYwDnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_fncDIDnrEe2apOcrzGxEuA" base_Element="_fnaN8TnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_fnd4UDnrEe2apOcrzGxEuA" base_Element="_fncDITnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_fnfGcDnrEe2apOcrzGxEuA" base_Element="_fnd4UTnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_fnhisDnrEe2apOcrzGxEuA" base_Element="_fnftgDnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_fnj-8DnrEe2apOcrzGxEuA" base_Element="_fnhisTnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_fntv8DnrEe2apOcrzGxEuA" base_Element="_fnr6wTnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_fnz2kDnrEe2apOcrzGxEuA" base_Element="_fnzPgDnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_fn1rwDnrEe2apOcrzGxEuA" base_Element="_fn1EsTnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_foLqADnrEe2apOcrzGxEuA" base_Element="_foJ00DnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_foNfMDnrEe2apOcrzGxEuA" base_Element="_foLqATnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Reference xmi:id="_foOtUDnrEe2apOcrzGxEuA" base_Element="_foNfMTnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gcVDwDnrEe2apOcrzGxEuA" base_Element="_gcT1oDnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Annotations xmi:id="_gcWR4DnrEe2apOcrzGxEuA" base_Element="_gcT1oDnrEe2apOcrzGxEuA">
+    <annotations xmi:id="_gcW48DnrEe2apOcrzGxEuA" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_gc2oMDnrEe2apOcrzGxEuA" base_Element="_gc1aEDnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_icDf0DnrEe2apOcrzGxEuA" base_Element="_icC4wDnrEe2apOcrzGxEuA"/>
+  <UMLLabProfile:Annotations xmi:id="_icDf0TnrEe2apOcrzGxEuA" base_Element="_icC4wDnrEe2apOcrzGxEuA">
+    <annotations xmi:id="_icEG4DnrEe2apOcrzGxEuA" name="Test"/>
+  </UMLLabProfile:Annotations>
+</xmi:XMI>
