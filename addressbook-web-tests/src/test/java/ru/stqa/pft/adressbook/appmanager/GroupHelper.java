@@ -2,49 +2,55 @@ package ru.stqa.pft.adressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import ru.stqa.pft.adressbook.model.GroupData;
 
-public class GroupHelper {
+public class GroupHelper extends HelperBase {
 
-	private WebDriver driver;
-	
-	public GroupHelper(WebDriver driver2) {
-		this.driver = driver2;
+	public GroupHelper(WebDriver driver) {
+		super(driver);
 	}
 
 	public void returnToGroupPage() {
-		driver.findElement(By.linkText("group page")).click();
+		click(By.linkText("group page"));
 	}
 
 	public void submitGroupCreation() {
-		driver.findElement(By.name("submit")).click();
+		click(By.name("submit"));
 	}
 
 	public void fillGroupForm(GroupData groupData) {
-		driver.findElement(By.name("group_name")).click();
-		driver.findElement(By.name("group_name")).sendKeys(groupData.getGroupName());
-		driver.findElement(By.name("group_header")).click();
-		driver.findElement(By.name("group_header")).sendKeys(groupData.getGroupHeader());
-		driver.findElement(By.name("group_footer")).click();
-		driver.findElement(By.name("group_footer")).sendKeys(groupData.getGroupFooter());
+		type(By.name("group_name"), groupData.getGroupName());
+		click(By.name("group_header"));
+		type(By.name("group_header"), groupData.getGroupHeader());
+		click(By.name("group_footer"));
+		type(By.name("group_footer"), groupData.getGroupFooter());
 	}
 
 	public void initGroupCreation() {
-		driver.findElement(By.name("new")).click();
+		click(By.name("new"));
 	}
 
 	public void deleteSelectedGroups() {
-		driver.findElement(By.name("delete")).click();
+		click(By.name("delete"));
 	}
 
 	public void selectGroup() {
-		driver.findElement(By.name("selected[]")).click();
+		click(By.name("selected[]"));
 	}
 
-	public WebDriver getDriver() {
-		return driver;
+	public void initGroupModification() {
+		click(By.name("edit"));
+		
 	}
+
+	public void submitGroupModification() {
+		click(By.name("update"));
+		
+	}
+
+//	public WebDriver getDriver() {
+//		return driver;
+//	}
 
 }
