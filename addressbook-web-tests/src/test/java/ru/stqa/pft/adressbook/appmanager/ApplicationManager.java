@@ -15,6 +15,7 @@ public class ApplicationManager {
 	private SessionHelper sessionHelper;
 	private GroupHelper groupHelper;
 	private NavigationHelper navigationHelper;
+	private ContactHelper contactHelper;
 
 	public NavigationHelper getNavigationHelper() {
 		return navigationHelper;
@@ -34,7 +35,12 @@ public class ApplicationManager {
 		sessionHelper = new SessionHelper(driver);
 		groupHelper = new GroupHelper(driver);
 		navigationHelper = new NavigationHelper(driver);
+		contactHelper = new ContactHelper(driver);
 		sessionHelper.login("admin", "secret");
+	}
+
+	public ContactHelper getContactHelper() {
+		return contactHelper;
 	}
 
 	public void stop() {
