@@ -31,4 +31,18 @@ public class ContactHelper extends HelperBase {
 		click(By.linkText("home page"));
 	}
 
+	public void selectContact() {
+		click(By.cssSelector("tr:nth-child(2) > .center:nth-child(8) img"));
+		
+	}
+
+	public void deleteSelectedContact() {
+		click(By.cssSelector("input:nth-child(2)"));	
+	}
+
+	public void confirmContactDeletion() {
+		driver.switchTo().alert().accept();
+		
+	}
+
 }
