@@ -1,10 +1,12 @@
 package com.r4ndy;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
+
 
 public class SandboxProjectTest {
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testDistance() {
 		Point p1 = new Point(0,0);
