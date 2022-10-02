@@ -1,7 +1,11 @@
 package ru.stqa.pft.adressbook.appmanager;
 
+import java.util.NoSuchElementException;
+
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import ru.stqa.pft.adressbook.model.ContactData;
 
@@ -15,7 +19,7 @@ public class ContactHelper extends HelperBase {
 		click(By.linkText("add new"));
 	}
 
-	public void fillContactForm(ContactData contactData) {
+	public void fillContactForm(ContactData contactData, boolean  creation) {
 		type(By.name("firstname"), contactData.getFirstName());
 		click(By.name("lastname"));
 		type(By.name("lastname"), contactData.getLastName());
@@ -23,9 +27,14 @@ public class ContactHelper extends HelperBase {
 		type(By.name("mobile"), contactData.getMobilePhone());
 		click(By.name("address2"));
 		type(By.name("address2"), contactData.getAdress());
-
+		if(creation) {
+			new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+		} else {
+			Assert.assertFalse(isElementPresent(By.name("new_group")));
+		}
 	}
 
+	
 	public void submitContactCreation() {
 		click(By.cssSelector("input:nth-child(87)"));
 		click(By.linkText("home page"));
@@ -33,16 +42,16 @@ public class ContactHelper extends HelperBase {
 
 	public void selectContact() {
 		click(By.cssSelector("tr:nth-child(2) > .center:nth-child(8) img"));
-		
+
 	}
 
 	public void deleteSelectedContact() {
-		click(By.cssSelector("input:nth-child(2)"));	
+		click(By.cssSelector("input:nth-child(2)"));
 	}
 
 	public void confirmContactDeletion() {
 		driver.switchTo().alert().accept();
-		
+
 	}
 
 }

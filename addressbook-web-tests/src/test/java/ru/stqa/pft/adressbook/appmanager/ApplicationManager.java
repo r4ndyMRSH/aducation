@@ -2,6 +2,7 @@ package ru.stqa.pft.adressbook.appmanager;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -46,6 +47,7 @@ public class ApplicationManager {
 		
 		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
+		driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 		sessionHelper = new SessionHelper(driver);
 		groupHelper = new GroupHelper(driver);
 		navigationHelper = new NavigationHelper(driver);

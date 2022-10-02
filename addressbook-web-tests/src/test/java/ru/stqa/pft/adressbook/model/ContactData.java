@@ -7,13 +7,19 @@ public class ContactData {
 	private String mobilePhone;
 	private int birghtDay;
 	private String adress;
+	private String group;
 	
-	public ContactData(String firstName, String lastName, String mobilePhone, String adress) {
+	public String getGroup() {
+		return group;
+	}
+
+	public ContactData(String firstName, String lastName, String mobilePhone, String adress, String group) {
 //		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.mobilePhone = mobilePhone;
 		this.adress = adress;
+		this.group = group;
 	}
 
 	private int birghtYear;
