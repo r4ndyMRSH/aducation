@@ -1,7 +1,5 @@
 package ru.stqa.pft.adressbook.appmanager;
 
-import java.util.NoSuchElementException;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -41,17 +39,29 @@ public class ContactHelper extends HelperBase {
 	}
 
 	public void selectContact() {
-		click(By.cssSelector("tr:nth-child(2) > .center:nth-child(8) img"));
+		click(By.name("selected[]"));
 
 	}
 
 	public void deleteSelectedContact() {
-		click(By.cssSelector("input:nth-child(2)"));
+		click(By.cssSelector(".left:nth-child(8) > input"));
+		driver.switchTo().alert().accept();
 	}
 
 	public void confirmContactDeletion() {
 		driver.switchTo().alert().accept();
 
+	}
+
+	public boolean isThereAContact() {
+		return (isElementPresent(By.name("selected[]")) && isElementPresent(By.name("MainForm")));
+	}
+
+	public void createContact(ContactData contactData) {
+		initContactCreation();
+		fillContactForm(contactData, true);
+		submitContactCreation();
+		
 	}
 
 }
