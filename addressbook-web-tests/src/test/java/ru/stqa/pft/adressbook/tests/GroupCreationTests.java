@@ -1,5 +1,6 @@
 package ru.stqa.pft.adressbook.tests;
 
+import java.util.Comparator;
 import java.util.List;
 
 import org.junit.Assert;
@@ -13,13 +14,24 @@ public class GroupCreationTests extends TestBase {
 	public void testGroupCreation() {
 
 		app.getNavigationHelper().gotoGroupPage();
-		List <GroupData> before = app.getGrouphelper().getGroupList();
-		app.getGrouphelper().createGroup(new GroupData("test1", null, null));
-		
+		List<GroupData> before = app.getGrouphelper().getGroupList();
+		GroupData group = new GroupData("test2", null, null);
+		app.getGrouphelper().createGroup(group);
+
 		List<GroupData> after = app.getGrouphelper().getGroupList();
 
-
 		Assert.assertTrue(after.size() == before.size() + 1);
+
+//Using Lambda for compare with stream().max() method
+		group.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
+		before.add(group);
+		Comparator<? super GroupData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
+
+		before.sort(byId);
+		after.sort(byId);
+
+		Assert.assertEquals(before, after);
+
 //		System.out.println("before: " + before + " | after " + after);
 
 	}
